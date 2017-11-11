@@ -1,0 +1,11 @@
+body {
+  background-color: #dedeff;
+}
+
+.w3-ul li:hover {
+  color: teal;
+}
+
+.w3-ul li a {
+  text-decoration: none;
+}
