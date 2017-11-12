@@ -6,6 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
@@ -17,8 +18,8 @@
   <body>
       <!-- Header Jumbotron -->
       <div class="jumbotron text-center">
-        <h1>SJF Photography</h1>
-        <p>Welcome to the album of <span class="badge badge-dark">SJFly</span></p>
+        <h1>Photo Venue</h1>
+        <p class="text-muted">Welcome to Venue <span class="badge badge-dark">2017</span></p>
       </div>
 
       <!-- Sticky Navigation -->
@@ -64,15 +65,56 @@
         </a>
       </div>
 
+      <!-- Fluid Container -->
+      <div class="container-fluid text-center mt-4 mb-4">
+        <h4>Upcoming Shows</h4>
+        <small>Get Your Tickets</small>
 
-
-
-
+        <!-- Row with Cards -->
+        <div class="row text-left">
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="images/boulder.jpg" alt="Boulder" id="boulder" class="pb-2">
+                <p>Boulder</p>
+                <p class="text-muted">Sat 11 Nov 2017</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <button type="button" class="btn btn-dark">Attend</button>
+                <span class="badge badge-pill badge-info float-right mt-2">3</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="images/csprings.jpg" alt="Colorado Springs" id="csprings" class="pb-2">
+                <p>Colorado Springs</p>
+                <p class="text-muted">Mon 20 Nov 2017</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <button type="button" class="btn btn-dark">Attend</button>
+                <span class="badge badge-pill badge-info float-right mt-2">8</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="images/denver.jpg" alt="Denver" id="denver" class="pb-2">
+                <p>Denver</p>
+                <p class="text-muted">Thurs 7 Dec 2017</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <button type="button" class="btn btn-dark">Attend</button>
+                <span class="badge badge-pill badge-info float-right mt-2">23</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- Fluid Container -->
-      <div class="container-fluid text-center mt-4">
+      <div class="container-fluid text-center text-dark pt-4 pb-4" style="background-color: #e9ecef;">
         <h2>Winter</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur.</p>
 
         <div class="row">
           <div class="col-sm-4"><img src="images/snow1.jpg" alt="snow1"></div>
@@ -81,31 +123,60 @@
         </div>
       </div>
 
+
       <!-- Contact Form -->
-      <div class="container-fluid bg-dark mt-4 text-light pt-5 pb-5">
-        <h4 class="text-center">Sign Up to View More</h4>
-        <div class="form-group pt-5">
-          <label for="email">Email Address</label>
-          <input type="email" name="email" class="form-control">
+      <div class="container-fluid mt-4 pt-5 pb-5">
+        <h4 class="text-center">Sign Up</h4>
+        <div class="form-group">
+          <label for="email">Name</label>
+          <input type="text" name="name" class="form-control">
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" name="password" class="form-control">
+          <label for="password">Email</label>
+          <input type="text" name="email" class="form-control">
         </div>
         <div class="form-check">
           <label class="form-check-label">
-            <input type="checkbox" class="form-check-input"> Receive Emails
+            <input type="checkbox" class="form-check-input"> Receive Notifications
           </label>
         </div>
-        <button type="submit" class="btn btn-info">Submit</button>
+        <button type="submit" class="btn btn-dark">Submit</button>
       </div>
 
 
-      <!-- Map -->
+      <!-- Add Google Maps -->
+      <div id="googleMap" style="height:400px;"></div>
+      <script>
+      function myMap() {
+        myCenter=new google.maps.LatLng(40.0149856, -105.27054559999999);
+        var mapOptions= {
+          center:myCenter,
+          zoom:12, scrollwheel: false, draggable: false,
+          mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+        var marker = new google.maps.Marker({
+          position: myCenter,
+        });
+        marker.setMap(map);
+      }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY4V5DQejIFL8bC97fxeKr8301LE8VJ7c&callback=myMap"></script>
 
 
 
       <!-- Footer -->
+      <footer class="bg-dark text-center text-light pb-2 pt-4">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p class="w3-medium">Contact <a href="https://joefly.site" target="_blank">SuperJoeFly</a></p>
+      </footer>
+
 
   </body>
 </html>
