@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bulma Template</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <style>
+    .breadcrumb ul li a {
+      color: #33d2d2;
+    }
+    </style>
+
+  </head>
+  <body>
+
+    <div id="app">
+      <nav class="navbar" role="navigation">
+        <div class="navbar-brand">
+          <a href="https://joefly.site" class="navbar-item">
+            <img src="images/avatar.png" alt="avatar">
+          </a>
+          <button class="button navbar-burger" data-target="navMenu" style="border: none;" @click="toggleNav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+          <a href="#" class="navbar-item">Projects</a>
+          <a href="#" class="navbar-item">Code</a>
+          <a href="#" class="navbar-item">About</a>
+        </div>
+      </nav>
+
+      <section class="section">
+        <div class="container">
+          <h1 class="title">
+            Hello World
+          </h1>
+          <p class="subtitle">
+            My first website with <strong>Bulma</strong>!
+          </p>
+        </div>
+      </section>
+    </div>
+
+<script>
+
+var vm = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello'
+  },
+
+  methods: {
+    toggleNav(event) {
+      let el = event.target;
+      let target = event.target.dataset.target;
+      let $target = document.getElementById(target);
+
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+    }
+  }
+})
+</script>
+
+  </body>
+</html>
