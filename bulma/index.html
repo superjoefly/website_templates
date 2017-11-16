@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Vuejs -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
     <style>
     .subtitle span {
       color: #63bdbd !important;
     }
-    .navbar, .navbar-burger, .navbar-menu {
+    .navbar, .navbar-burger, .navbar-menu, footer {
       background: #63bdbd;
       color: white !important;
     }
@@ -22,25 +23,48 @@
       color: white !important;
     }
     .column {
-      border: 1px solid grey;
+      /*border: 1px solid grey;*/
+    }
+    body {
+      background-color: #fdffea;
+    }
+    .vertical-align {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .icon {
+      float: right;
+      margin: 0px 5px 5px 0px;
+    }
+    .icon:hover {
+      border: 1px solid white;
+      border-radius: 3px;
+    }
+    .label {
+      color: #ccc !important;
     }
     </style>
 
   </head>
   <body>
 
+    <!-- Navigation -->
     <div id="app">
-      <nav class="navbar" role="navigation">
+      <nav class="navbar is-fixed-top" role="navigation">
         <div class="navbar-brand">
           <a href="https://joefly.site" class="navbar-item">
             <img src="images/avatar.png" alt="avatar">
             <p class="has-text-white">&nbsp; Joefly.site</p>
           </a>
+
           <button class="button navbar-burger is-shadowless" data-target="navMenu" style="border: none;" @click="toggleNav">
             <span></span>
             <span></span>
             <span></span>
           </button>
+
         </div>
         <div class="navbar-menu" id="navMenu">
           <a href="#" class="navbar-item">Projects</a>
@@ -49,7 +73,8 @@
         </div>
       </nav>
 
-      <section class="hero is-medium is-light is-bold">
+      <!-- Hero -->
+      <section class="hero is-fullheight is-light is-bold">
         <div class="hero-body">
           <div class="container">
             <h1 class="title">
@@ -62,40 +87,152 @@
         </div>
       </section>
 
+
+      <!-- Columns -->
       <div class="columns is-marginless">
         <div class="column is-half">
-          <img src="images/nature1.jpg" alt="nature1" />test
+          <img src="images/nature1.jpg" alt="nature1" />
+          <div class="notification is-dark">
+            <p>Sugarloaf Wilderness
+              <span class="icon">
+                <i class="fa fa-facebook"></i>
+              </span>
+              <span class="icon">
+                <i class="fa fa-twitter"></i>
+              </span>
+              <span class="icon">
+                <i class="fa fa-linkedin"></i>
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="column is-half vertical-align">
+          <div class="box has-text-centered">
+            <p>This was an absolutely beautiful day in the ipsum lorem!</p>
+          </div>
         </div>
       </div>
 
+      <hr class="is-hidden-tablet">
       <div class="is-clearfix"></div>
 
       <div class="columns is-marginless">
-        <div class="column is-half"></div>
+        <div class="column is-half vertical-align">
+          <div class="box has-text-centered">
+            <p>Aspen is one of my favorite trees...</p>
+          </div>
+        </div>
         <div class="column is-half">
-          <img src="images/nature2.jpg" alt="nature2" />test
+          <img src="images/nature2.jpg" alt="nature2" />
+          <div class="notification is-dark">
+            <p>Lion Rock Aspen
+              <span class="icon">
+                <i class="fa fa-facebook"></i>
+              </span>
+              <span class="icon">
+                <i class="fa fa-twitter"></i>
+              </span>
+              <span class="icon">
+                <i class="fa fa-linkedin"></i>
+              </span>
+            </p>
+          </div>
         </div>
       </div>
 
+      <hr class="is-hidden-tablet">
       <div class="is-clearfix"></div>
 
       <div class="columns is-marginless">
         <div class="column is-half">
           <img src="images/nature3.jpg" alt="nature3">
+          <div class="notification is-dark">
+            <p>Magnolia
+              <span class="icon">
+                <i class="fa fa-facebook"></i>
+              </span>
+              <span class="icon">
+                <i class="fa fa-twitter"></i>
+              </span>
+              <span class="icon">
+                <i class="fa fa-linkedin"></i>
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="column is-half vertical-align">
+          <div class="box has-text-centered">
+            <p>Snowy mountains are a true sight to hold!</p>
+          </div>
         </div>
       </div>
 
+      <hr class="is-hidden-tablet">
       <div class="is-clearfix"></div>
 
       <div class="columns is-marginless">
-        <div class="column is-half"></div>
+        <div class="column is-half vertical-align">
+          <div class="box has-text-centered">
+            <p>Nothing beats a sunny day in the mountains!</p>
+          </div>
+        </div>
         <div class="column is-half">
-          <img src="images/nature4.jpg" alt="nature4" />test
+          <img src="images/nature4.jpg" alt="nature4" />
+          <div class="notification is-dark">
+            <p>Continental Divide
+              <span class="icon">
+                <i class="fa fa-facebook"></i>
+              </span>
+              <span class="icon">
+                <i class="fa fa-twitter"></i>
+              </span>
+              <span class="icon">
+                <i class="fa fa-linkedin"></i>
+              </span>
+            </p>
+          </div>
         </div>
       </div>
 
+      <span class="button is-primary is-outlined" style="margin: 10px;" @click="toggleModal">Contact</span>
 
+      <!-- Contact Modal -->
+      <div class="modal" id="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
 
+          <span class="icon is-pulled-right is-light is-large" @click="toggleModal"><i class="fa fa-close" style="color: #ccc;"></i></span>
+
+          <section class="section">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="e.g John Doe">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control">
+                <input class="input" type="email" placeholder="e.g. johndoe@gmail.com">
+              </div>
+            </div>
+
+            <div class="control">
+              <button class="button is-success" style="margin-top: 10px;">Submit</button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- <footer class="footer"> -->
+        <!-- <div class="container"> -->
+          <footer class="container has-text-centered" style="padding: 30px !important">
+            <p>Footer</p>
+            <img src="images/made-with-bulma.png" style="max-width: 100px;" />
+          </footer>
+        <!-- </div> -->
+      <!-- </footer> -->
 
     </div>
 
@@ -115,6 +252,10 @@ var vm = new Vue({
 
       el.classList.toggle('is-active');
       $target.classList.toggle('is-active');
+    },
+    toggleModal() {
+      let modal = document.getElementById('modal');
+      modal.classList.toggle('is-active');
     }
   }
 })
