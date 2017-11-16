@@ -11,8 +11,18 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
     <style>
-    .breadcrumb ul li a {
-      color: #33d2d2;
+    .subtitle span {
+      color: #63bdbd !important;
+    }
+    .navbar, .navbar-burger, .navbar-menu {
+      background: #63bdbd;
+      color: white !important;
+    }
+    .navbar-menu a {
+      color: white !important;
+    }
+    .column {
+      border: 1px solid grey;
     }
     </style>
 
@@ -24,8 +34,9 @@
         <div class="navbar-brand">
           <a href="https://joefly.site" class="navbar-item">
             <img src="images/avatar.png" alt="avatar">
+            <p class="has-text-white">&nbsp; Joefly.site</p>
           </a>
-          <button class="button navbar-burger" data-target="navMenu" style="border: none;" @click="toggleNav">
+          <button class="button navbar-burger is-shadowless" data-target="navMenu" style="border: none;" @click="toggleNav">
             <span></span>
             <span></span>
             <span></span>
@@ -38,16 +49,54 @@
         </div>
       </nav>
 
-      <section class="section">
-        <div class="container">
-          <h1 class="title">
-            Hello World
-          </h1>
-          <p class="subtitle">
-            My first website with <strong>Bulma</strong>!
-          </p>
+      <section class="hero is-medium is-light is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Hello World
+            </h1>
+            <p class="subtitle">
+              Lorem Ipsum <span>Bulma</span>!
+            </p>
+          </div>
         </div>
       </section>
+
+      <div class="columns is-marginless">
+        <div class="column is-half">
+          <img src="images/nature1.jpg" alt="nature1" />test
+        </div>
+      </div>
+
+      <div class="is-clearfix"></div>
+
+      <div class="columns is-marginless">
+        <div class="column is-half"></div>
+        <div class="column is-half">
+          <img src="images/nature2.jpg" alt="nature2" />test
+        </div>
+      </div>
+
+      <div class="is-clearfix"></div>
+
+      <div class="columns is-marginless">
+        <div class="column is-half">
+          <img src="images/nature3.jpg" alt="nature3">
+        </div>
+      </div>
+
+      <div class="is-clearfix"></div>
+
+      <div class="columns is-marginless">
+        <div class="column is-half"></div>
+        <div class="column is-half">
+          <img src="images/nature4.jpg" alt="nature4" />test
+        </div>
+      </div>
+
+
+
+
     </div>
 
 <script>
