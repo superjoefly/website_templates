@@ -6,80 +6,18 @@
   <!-- Saira Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
 
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+
   <title>CSS3 Parallax</title>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: 'Saira', sans-serif;
-  color: #777;
-}
-
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  position: relative;
-  opacity: 0.65;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bgimg-1 {
-  background-image: url("images/scene.jpg");
-  min-height: 100%;
-}
-
-.bgimg-2 {
-  background-image: url("images/lamp.png");
-  min-height: 400px;
-}
-
-.bgimg-3 {
-  background-image: url("images/hand.png");
-  min-height: 400px;
-}
-
-/*Center Captions*/
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-.caption span.border {
-  background-color: #000;
-  color: white;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-
-h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #111;
-}
-
-p {
-  text-align: center;
-}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-    }
-}
-</style>
 </head>
 <body>
 
-<div class="bgimg-1">
+<div class="bgimg-1 demo parallax">
   <div class="caption">
     <span class="border">Scroll Down!</span>
+    <br><br><br>
+    <button type="button" name="button" onclick="toggleParallax()">Toggle Parallax</button>
   </div>
 </div>
 
@@ -88,7 +26,7 @@ p {
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam explicabo accusamus ratione neque distinctio delectus modi commodi veniam maiores mollitia iste quia nulla impedit accusantium, error cumque cupiditate culpa, officiis labore expedita. Reprehenderit mollitia voluptatem architecto? Repudiandae odio dicta tenetur, omnis commodi, iusto cumque repellendus, accusamus quas fuga numquam velit! Pariatur libero odio maiores ullam ipsa nulla aperiam obcaecati voluptatibus saepe tempore quisquam corporis laudantium natus illum illo aut, voluptas minus nemo doloribus eius, recusandae soluta sequi. Nihil nisi expedita doloremque porro excepturi repellat rem provident sit facere. Magnam delectus maxime nesciunt amet assumenda consequatur repudiandae autem sunt dolor inventore!</p>
 </div>
 
-<div class="bgimg-2">
+<div class="bgimg-2 demo parallax">
   <div class="caption">
     <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Your Website</span>
   </div>
@@ -101,7 +39,7 @@ p {
   </div>
 </div>
 
-<div class="bgimg-3">
+<div class="bgimg-3 demo parallax">
   <div class="caption">
     <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Is Awesome!</span>
   </div>
@@ -113,7 +51,7 @@ p {
   </div>
 </div>
 
-<div class="bgimg-1">
+<div class="bgimg-1 demo parallax">
   <div class="caption">
     <span class="border">COOL!</span>
   </div>
