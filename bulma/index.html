@@ -42,6 +42,9 @@
       border: 1px solid white;
       border-radius: 3px;
     }
+    .notification {
+      margin-top: -15px;
+    }
     .label {
       color: #ccc !important;
     }
@@ -59,10 +62,8 @@
             <p class="has-text-white">&nbsp; Joefly.site</p>
           </a>
 
-          <button class="button navbar-burger is-shadowless" data-target="navMenu" style="border: none;" @click="toggleNav">
-            <span></span>
-            <span></span>
-            <span></span>
+          <button class="button navbar-burger is-shadowless" data-target="navMenu" style="border: none;" @click.capture="toggleNav" id="myButton">
+            <span v-for="n in 3" @click="toggleNav" data-target="navMenu"></span>
           </button>
 
         </div>
@@ -92,7 +93,7 @@
       <div class="columns is-marginless">
         <div class="column is-half">
           <img src="images/nature1.jpg" alt="nature1" />
-          <div class="notification is-dark">
+          <div class="notification">
             <p>Sugarloaf Wilderness
               <span class="icon">
                 <i class="fa fa-facebook"></i>
@@ -108,7 +109,7 @@
         </div>
         <div class="column is-half vertical-align">
           <div class="box has-text-centered">
-            <p>This was an absolutely beautiful day in the ipsum lorem!</p>
+            <p>This was an absolutely beautiful day on Sugarloaf Mountain!</p>
           </div>
         </div>
       </div>
@@ -124,7 +125,7 @@
         </div>
         <div class="column is-half">
           <img src="images/nature2.jpg" alt="nature2" />
-          <div class="notification is-dark">
+          <div class="notification">
             <p>Lion Rock Aspen
               <span class="icon">
                 <i class="fa fa-facebook"></i>
@@ -146,7 +147,7 @@
       <div class="columns is-marginless">
         <div class="column is-half">
           <img src="images/nature3.jpg" alt="nature3">
-          <div class="notification is-dark">
+          <div class="notification">
             <p>Magnolia
               <span class="icon">
                 <i class="fa fa-facebook"></i>
@@ -173,12 +174,12 @@
       <div class="columns is-marginless">
         <div class="column is-half vertical-align">
           <div class="box has-text-centered">
-            <p>Nothing beats a sunny day in the mountains!</p>
+            <p>Nothing beats a sunny day in Colorado!</p>
           </div>
         </div>
         <div class="column is-half">
           <img src="images/nature4.jpg" alt="nature4" />
-          <div class="notification is-dark">
+          <div class="notification">
             <p>Continental Divide
               <span class="icon">
                 <i class="fa fa-facebook"></i>
@@ -225,18 +226,21 @@
         </div>
       </div>
 
-      <!-- <footer class="footer"> -->
-        <!-- <div class="container"> -->
-          <footer class="container has-text-centered" style="padding: 30px !important">
-            <p>Footer</p>
-            <img src="images/made-with-bulma.png" style="max-width: 100px;" />
-          </footer>
-        <!-- </div> -->
-      <!-- </footer> -->
+      <footer class="has-text-centered" style="padding: 30px !important; width: 100%;">
+        <p>Footer</p>
+        <img src="images/made-with-bulma.png" style="max-width: 100px;" />
+      </footer>
 
     </div>
 
 <script>
+
+window.onclick = function closeNav() {
+  if (event.target.id !== 'myButton') {
+    document.getElementById('myButton').classList.remove('is-active')
+    document.getElementById('navMenu').classList.remove('is-active')
+  }
+}
 
 var vm = new Vue({
   el: '#app',
