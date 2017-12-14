@@ -22,6 +22,10 @@ img {
   filter: grayscale(100%);
 }
 
+.card {
+  background-color: #ccc;
+}
+
 #googleMap {
   -webkit-filter: invert(100%);
   filter: invert(100%);
