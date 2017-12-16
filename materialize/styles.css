@@ -1,0 +1,12 @@
+.header {
+  background: url('images/background.jpg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.transparent {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
