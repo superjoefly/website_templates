@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Page Sample</title>
+  <meta charset="utf-8" />
+  <meta name = "viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap Slate Theme -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css" />
+
+  <!-- jQuery min.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Matcheight.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+
+  <!-- Bootstrap min.js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+  .tc-1 {
+    color: beige;
+  }
+
+  p {
+    padding: 20px 0;
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 800px) {
+    form {
+      width: 50%;
+      margin: auto;
+    }
+  }
+  </style>
+</head>
+
+<body style="margin: 10px">
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="row">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="glyphicon glyphicon-menu-hamburger" style="color: white;"></span>
+      </button>
+      <a href="javascript:void(0)" class="navbar-brand" style="margin-left: 5px;">JoeFly.Site</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://joefly.site">Home</a></li>
+        <li><a href="../../resume">Resume</a></li>
+        <li><a href="../../portfolio">Portfolio</a></li>
+        <li><a href="../../projects">Projects</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"> Sign Up</span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"> Search</span></a></li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron tc-1" style="text-align: center;">
+  <h1>Lorem Ipsum!</h1>
+  <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quos enim, doloremque voluptatem, aperiam hic dolores!</small></p>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 item">
+      <img src="view1.jpg" alt="a pretty view" class="img-responsive img-rounded" style="padding-top: 25px;"/>
+    </div>
+    <div class="col-md-6 item tc-1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <h2 style="text-align: center;">Contact Me!</h2>
+  <form>
+    <div class="form-group">
+      <label for="fname">First Name:</label>
+      <input type="text" class="form-control" id="fname" placeholder="First Name" />
+    </div>
+    <div class="form-group">
+      <label for="lname">Last Name:</label>
+      <input type="text" class="form-control" id="lname" placeholder="Last Name" />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Email" />
+    </div>
+  </form>
+</div>
+
+<div class="container-fluid">
+  <p style="text-align: center;">Copyright &copy; <script>document.write(new Date().getFullYear())</script>
+  <a href="mailto:superjoefly@gmail.com">SuperJoeFly</a>
+  </p>
+</div>
+
+<!-- Back Button -->
+<a href="https://joefly.site/pages/projects/" class="btn btn-primary btn-block">Back</a>
+
+
+<!-- For Equal Height Columns -->
+<script>
+$(function() {
+  $('.item').matchHeight();
+});
+</script>
+
+</body>
+</html>
