@@ -2,6 +2,10 @@ body {
   background-color: #dedeff;
 }
 
+.w3-ul li {
+  margin-top: 10px;
+}
+
 .w3-ul li:hover {
   color: teal;
 }
